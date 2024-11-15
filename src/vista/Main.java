@@ -29,7 +29,7 @@ public class Main {
             System.out.println("Ingrese un signo válido");
         }
         
-        
+        //PERSPECTIVA DE PROGRAMACIÓN ORIENTADA A OBJETOS
         //PROBAR UNA CLASE
         //DECLARAR/INSTANCIAR UN OBJETOS
         //NombreClase nombreObjeto(variable)=new NombreClase();
