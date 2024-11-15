@@ -77,7 +77,29 @@ public class Persona {
         return "No existe coincidencia";
     }
 
-  
+    //ETAPA DE DESARROLLO 
+     
+    public void etapaDesarrollo(int edad){
+        String resultado="";
+        if(edad>=0 && edad<=5){
+            resultado="Primera infancia";
+        }else if (edad>=6 && edad<=11) {
+            resultado= "Infancia";
+        }else if (edad>=12 && edad<=18) {
+             resultado= "Adolescencia";
+        }else if (edad>=14 && edad<=26) {
+            resultado= "Juventud";
+        }else if(edad>=19 && edad<40){
+             resultado= "Adultez Temprana";
+        }else if (edad>=40 && edad<60) {
+            resultado= "Adultez Media";
+        }else if (edad>60) {
+            resultado= "Adultez Mayor";
+        }
+        System.out.println("Tu etapa de desarrollo es: "+resultado);
+    
+    
+    }
     
     
 }

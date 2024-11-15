@@ -49,6 +49,8 @@ public class Main {
        //CAPTURAR POR TECLADO Y ALMACENAR EN EL ATRIBUTO DEL OBJETO
         b.setSigno(es.nextLine());
         System.out.println(b.determinarHoroscopo());
+        System.out.println("Ingrese su edad:");
+        b.etapaDesarrollo(es.nextInt());
         
     }
     
