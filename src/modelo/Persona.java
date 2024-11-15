@@ -46,11 +46,14 @@ public class Persona {
     
     //4.-MÉTODO DE REGLA DE NEGOCIO
     public String determinarHoroscopo(){
+        //compara 2 cadenas y devuelve un entero 0 si es igual, !=0 si no es igual
            if(signo.compareTo("Aries")==0){
                return "¡Eres de Aires! Gobernado por Marte, planeta relacionado con el dios romano de la guerra, este signo de fuego enciende nuevos comienzos";
-           }else if (signo.compareToIgnoreCase("Tauro")==0) {
+           }//ignora las mayúsculas o minúsculas de una cadena
+           else if (signo.compareToIgnoreCase("Tauro")==0) {
             return "Reinadas por Venus, cuerpo celeste asociado a la divinidad del amor y la belleza, las personas de este signo conectado con la tierra, son manifestadoras de belleza y abundancia";
-        }else if (signo.equals("Géminis")==true) {
+        }//compara 2 cadenas y devuelve un booleano true si es igual, false si no es igual
+           else if (signo.equals("Géminis")==true) {
             return "Regido por Mercurio, astro vinculado al mensajero de los dioses, este signo intelectual se distingue por sus dones comunicativos.";
         }else if (signo.equals("Cáncer")) {
             return "Influenciado por la luna, este signo de agua hace a personas sumamente emocionales que nutren y se nutren del hogar y la familia. ";
