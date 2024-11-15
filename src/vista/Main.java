@@ -4,6 +4,7 @@
  */
 package vista;
 
+import java.util.Scanner;
 import modelo.Persona;
 
 /**
@@ -38,6 +39,17 @@ public class Main {
         //TODOS LOS MÉTODOS DE RETORNO SE DEBEN IMPRIMIR PARA
         //PODER VISUALIZAR EL VALOR CONTENIDO O ALMACENADO EN MEMORIA RAM
         System.out.println(a.determinarHoroscopo());
+        
+        //INSTANCIAR UN OBJETO DE TIPO SCANNER
+        //SCANNER permite capturar el ingreso de información por teclado
+        Scanner es=new Scanner(System.in);
+        //CREAR UN OBJETO DE TIPO PERSONA
+        Persona b=new Persona();
+        System.out.println("Ingrese su signo del zodiaco:");
+       //CAPTURAR POR TECLADO Y ALMACENAR EN EL ATRIBUTO DEL OBJETO
+        b.setSigno(es.nextLine());
+        System.out.println(b.determinarHoroscopo());
+        
     }
     
       
