@@ -111,7 +111,7 @@ public class Coche {
                 "Modelo:"+modelo+"\n"+
                 "Color:"+getColor()+"\n"+
                 "Precio:"+getPrecio()+"\n"+
-                "Propietario:"+getPropietario()+"\n"+
+                "Propietario:"+getPropietario().getSigno()+"\n"+
                 "Año de Fabricación:"+getAnio()+"\n"+
                 "Tipo de Vehículo:"+getTipoVehiculo());
     }
@@ -123,7 +123,7 @@ public class Coche {
                 "Modelo:"+modelo+"\n"+
                 "Color:"+getColor()+"\n"+
                 "Precio:"+getPrecio()+"\n"+
-                "Propietario:"+getPropietario()+"\n"+
+                "Propietario:"+getPropietario().getSigno()+"\n"+
                 "Año de Fabricación:"+getAnio()+"\n"+
                 "Tipo de Vehículo:"+getTipoVehiculo();}
     
