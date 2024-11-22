@@ -111,7 +111,7 @@ public class Coche {
                 "Modelo:"+modelo+"\n"+
                 "Color:"+getColor()+"\n"+
                 "Precio:"+getPrecio()+"\n"+
-                "Propietario:"+getPropietario().getSigno()+"\n"+
+                "Propietario:"+getPropietario().getNombre()+" "+getPropietario().getApellido()+"\n"+
                 "Año de Fabricación:"+getAnio()+"\n"+
                 "Tipo de Vehículo:"+getTipoVehiculo());
     }
