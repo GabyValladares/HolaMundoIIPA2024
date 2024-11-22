@@ -11,7 +11,7 @@ package modelo;
  */
 public class Coche {
     
-    //1. DECLARACION DE VARIABLES O ATRIBUTOS PRIBADAS PERO GLOBALES
+    //1. DECLARACION DE VARIABLES O ATRIBUTOS PRIVADAS PERO GLOBALES
     private String placa;
     private String modelo;
     private String color;

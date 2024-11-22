@@ -8,6 +8,7 @@ package vista;
 import java.util.Scanner;
 import java.util.Set;
 import modelo.Coche;
+import modelo.Libro;
 import modelo.Persona;
 
 /**
@@ -75,6 +76,16 @@ public class Main {
         System.out.println("DATOS CON toString ");
         System.out.println(c1.toString());
         c1.toString();
+        
+        //CONSUMIR UN OBJETO DE TIPO LIBRO
+        System.out.println(" "); 
+        Libro l1=new Libro("1","Cálculo Diferencial","Dennis Zill","Reverté",2008);
+        l1.imprimir();
+        System.out.println(" ");
+        //System.out.println("DATOS CON toString ");
+        //System.out.println(l1.toString());
+        //l1.toString();
+        
         
          //DEBER
         //CLONAR Y CREARSE SU PROPIA RAMA
