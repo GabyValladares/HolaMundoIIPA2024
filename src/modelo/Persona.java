@@ -3,36 +3,40 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package modelo;
-
 import java.util.Date;
-
 /**
  *
- * @author Usuario
+ * @author Roberto2022
  */
 public class Persona {
-    //1.-DECLARAR LOS ATRIBUTOS DE TIPO PRIVADOS
+    //1. Declarar atributos
+    private String nombre;
+    private String apellido;
     private String signo;
     private Date fechaNacimiento;
-    
-    //2.-MÉTODO CONSTRUCTOR
 
+    // 2.1 Metodo constructor vacio
     public Persona() {
     }
+    // 2.2 Metodo constructor con argumentos
 
-   //3.-MÉTODOS DE ENCAPSULAMIENTO
+    public Persona(String nombre, String apellido, String signo, Date fechaNacimiento) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.signo = signo;
+        this.fechaNacimiento = fechaNacimiento;
+    }
 
-    //MÉTODO DE RETORNO-> DEVUELVE CADENA
+    
+   
+
+    //3. Metodos de get y set
+    
     public String getSigno() {
-        //RETURN -> ALMACENA EN MEMORIA RAM ESTE RESULTADO
         return signo;
     }
-    //MÉTODO DE NO RETORNO ->NO ALMACENA INFORMACIÓN
+
     public void setSigno(String signo) {
-        //THIS-> ES UN PUNTERO QUE HACE REFERENCIA A LA CLASE
-        //EN LA QUE ESTAMOS TRABAJANDO Y ACCEDE DIRECTAMENTE
-        //A ATRIBUTOS O MÉTODOS
-        
         this.signo = signo;
     }
 
@@ -43,18 +47,75 @@ public class Persona {
     public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
-    
-    //4.-MÉTODO DE REGLA DE NEGOCIO
-    public String determinarHoroscopo(){
-           if(signo=="Aries"){
-               return "Hoy será un mal día ";
-           }else if (signo=="Leo") {
-            return "Caminaras por sendas peligrosas";
-        }
-        return "No existe coincidencia";
+
+    public String getNombre() {
+        return nombre;
     }
 
-  
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
     
     
+    
+    
+    public String determinarOroscopo(){
+        
+        if (signo.compareTo("Aries")==0) {
+            return "Te vas a morir de hambre)";
+        } else if (signo.compareToIgnoreCase("Leo")==0) {
+            return "Hoy seras la persona más feliz del mundo";
+        } else if (signo.equals("Cancer")) {
+            return "Tendras un dia caótico es posible que te muerda un perro";
+        } else if ("Tauro".equals(signo)) {
+            return "Tendras un día muy lindo";
+        } else if ("Géminis".equals(signo)) {
+            return "Hoy conocerás a alguien nuevo que cambiará tu vida";
+        } else if ("Virgo".equals(signo)) {
+            return "Recibirás buenas noticias en el trabajo";
+        } else if ("Libra".equals(signo)) {
+            return "Tendrás que tomar una decisión importante hoy";
+        } else if ("Escorpio".equals(signo)) {
+            return "Hoy es un buen día para comenzar un nuevo proyecto";
+        } else if ("Sagitario".equals(signo)) {
+            return "Viajarás a un lugar que siempre quisiste conocer";
+        } else if ("Capricornio".equals(signo)) {
+            return "Tus esfuerzos finalmente serán recompensados";
+        } else if ("Acuario".equals(signo)) {
+            return "Un amigo te dará un buen consejo";
+        } else if ("Piscis".equals(signo)) {
+            return "Tendrás un día muy creativo y productivo";
+        } else {
+            return "Signo equivocado";
+        }
+
+    }
+    //etapa de desarrollo
+    public void determinarEdad(int Edad){
+        String rsult= "";
+        if(Edad >= 0 && Edad <= 5){
+            rsult = "Primera infancia";
+        }else if(Edad >= 6 && Edad <= 11){
+            rsult = "Infancia";
+        }else if(Edad >= 12 && Edad <= 18){
+            rsult = "Adoleciencia";
+        }else if (Edad >= 14 && Edad <= 26) {
+            rsult = "Juventud";
+        }else if (Edad >=19  && Edad < 40){
+            rsult = "Adultez media";
+        }else if (Edad >= 40 && Edad <= 60) {
+            rsult = "Adultez mayor";
+        }
+         System.out.println("Tu etapa de desarrollo es : "+rsult);       
+        
+    }
 }
+    
