@@ -4,10 +4,10 @@
  */
 package vista;
 
-import java.util.Scanner;
-import modelo.Coche;
+//import java.util.Scanner;
+//import modelo.Coche;
 import modelo.Persona;
-
+import modelo.Estudiante;
 /**
  *
  * @author Usuario
@@ -15,6 +15,21 @@ import modelo.Persona;
 public class Main {
     //1.-DECLARAR EL MÉTODO MAIN->LLAMA AL INTERPRETE DE JAVA
     public static void main(String[] args) {
+        
+        // Crear una instancia de Estudiante
+        Estudiante estudiante = new Estudiante(1, 12345, "08:00 - 12:00", "Mañana", 
+                                              101, "Juan", "Pérez", "1100912345", 
+                                              987654321, "Av. Principal 123", 
+                                              "juan.perez@correo.com", "Masculino", 
+                                              "01-01-2000");
+
+        // Imprimir los datos del estudiante
+        System.out.println(estudiante.imprimir());
+    }
+}
+
+        
+        
         //System.out.println("HOLA MUNDO!!!");
         
         
@@ -54,11 +69,11 @@ public class Main {
 //        b.etapaDesarrollo(es.nextInt());
 //        
         //CONSUMIR UN OBJETO DE TIPO COCHE
-        Persona nahim=new Persona();
-        nahim.setSigno("Piscis");
-        Coche c1=new Coche("IBA9613", "GRAN VITARA", "MORADO", 12.800,nahim , 2022, "AUTOMÓVIL");
-        c1.imprimir();
-        c1.toString();
+//        Persona nahim=new Persona();
+//        nahim.setSigno("Piscis");
+//        Coche c1=new Coche("IBA9613", "GRAN VITARA", "MORADO", 12.800,nahim , 2022, "AUTOMÓVIL");
+//        c1.imprimir();
+//        c1.toString();
         
         //DEBER
         //CLONAR Y CREARSE SU PROPIA RAMA
@@ -70,5 +85,4 @@ public class Main {
         //6) Diagrama de Clases 
         //7) Versionar en mi repositorio https://github.com/GabyValladares/HolaMundoIIPA2024
     
-    }       
-}
+          

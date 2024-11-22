@@ -4,59 +4,46 @@
  */
 package modelo;
 
-import java.util.Date;
-
 /**
  *
- * @author Usuario
+ * 
  */
 public class Persona {
-    //1.-DECLARAR LOS ATRIBUTOS DE TIPO PRIVADOS
+
+    // 1.- Atributos públicos
+    private int idPersona;
     private String nombre;
     private String apellido;
-    private String direccion;
     private String cedula;
-    private String telefono;
-    private String signo;
-    private Date fechaNacimiento;
-    
-    //2.-MÉTODO CONSTRUCTOR
+    private int telefono;
+    private String direccion;
+    private String correoElectrinico;
+   private String sexo;
+    private String fecha_de_nacimiento;
 
+    // 2.- Constructores
     public Persona() {
     }
 
-    public Persona(String nombre, String apellido, String direccion, String cedula, String telefono, String signo, Date fechaNacimiento) {
+    public Persona(int idPersona, String nombre, String apellido, String cedula, int telefono, String direccion, String correoElectrinico, String sexo, String fecha_de_nacimiento) {
+        this.idPersona = idPersona;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.direccion = direccion;
         this.cedula = cedula;
         this.telefono = telefono;
-        this.signo = signo;
-        this.fechaNacimiento = fechaNacimiento;
-    }
-    
-   //3.-MÉTODOS DE ENCAPSULAMIENTO
-
-    //MÉTODO DE RETORNO-> DEVUELVE CADENA
-    public String getSigno() {
-        //RETURN -> ALMACENA EN MEMORIA RAM ESTE RESULTADO
-        return signo;
-    }
-    //MÉTODO DE NO RETORNO ->NO ALMACENA INFORMACIÓN
-    public void setSigno(String signo) {
-        //THIS-> ES UN PUNTERO QUE HACE REFERENCIA A LA CLASE
-        //EN LA QUE ESTAMOS TRABAJANDO Y ACCEDE DIRECTAMENTE
-        //A ATRIBUTOS O MÉTODOS
-        
-        this.signo = signo;
+        this.direccion = direccion;
+        this.correoElectrinico = correoElectrinico;
+        this.sexo = sexo;
+        this.fecha_de_nacimiento = fecha_de_nacimiento;
     }
 
-    public Date getFechaNacimiento() {
-        return fechaNacimiento;
+    // Métodos getters y setters
+    public int getIdPersona() {
+        return idPersona;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
+    public void setIdPersona(int idPersona) {
+        this.idPersona = idPersona;
     }
 
     public String getNombre() {
@@ -75,14 +62,6 @@ public class Persona {
         this.apellido = apellido;
     }
 
-    public String getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
     public String getCedula() {
         return cedula;
     }
@@ -91,82 +70,57 @@ public class Persona {
         this.cedula = cedula;
     }
 
-    public String getTelefono() {
+    public int getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(String telefono) {
+    public void setTelefono(int telefono) {
         this.telefono = telefono;
     }
-    
-    //4.-MÉTODO DE REGLA DE NEGOCIO
-    public String determinarHoroscopo(){
-        //compara 2 cadenas y devuelve un entero 0 si es igual, !=0 si no es igual
-           if(signo.compareTo("Aries")==0){
-               return "¡Eres de Aires! Gobernado por Marte, planeta relacionado con el dios romano de la guerra, este signo de fuego enciende nuevos comienzos";
-           }//ignora las mayúsculas o minúsculas de una cadena
-           else if (signo.compareToIgnoreCase("Tauro")==0) {
-            return "Reinadas por Venus, cuerpo celeste asociado a la divinidad del amor y la belleza, las personas de este signo conectado con la tierra, son manifestadoras de belleza y abundancia";
-        }//compara 2 cadenas y devuelve un booleano true si es igual, false si no es igual
-           else if (signo.equals("Géminis")==true) {
-            return "Regido por Mercurio, astro vinculado al mensajero de los dioses, este signo intelectual se distingue por sus dones comunicativos.";
-        }else if (signo.equals("Cáncer")) {
-            return "Influenciado por la luna, este signo de agua hace a personas sumamente emocionales que nutren y se nutren del hogar y la familia. ";
-        }else if (signo=="Leo") {
-            return "Regido por el astro rey, este signo de fuego hace a los leoninos brillar con su esencia creativa e iluminar al prójimo, inspirándolo a rugir a su lado. ";
-        }else if (signo=="Virgo") {
-            return "Reinado por Mercurio, el mismo provee el don de bajar ideas a tierra. No por nada, la agenda y la rutina son mejores amigas de los virginianos, que a pesar de esto, no prescinden de la flexibilidad y son sumamente analíticos. ";
-        }else if (signo=="Libra") {
-            return "Gobernados por Venus, los librianos son conocidos por entrar en simbiosis con la estética y por formar alianzas y parejas.";
-        }else if (signo=="Escorpio") {
-            return "Regido por Plutón, astro asociado a la deidad del inframundo, este signo de agua hace a personas intuitivas y esotéricas. ";
-        }else if (signo=="Sagitario") {
-            return "Gobernado por Júpiter, planeta del padre de los dioses, las personas de este signo fogoso son inspiradoras y grandes maestras. ";
-        }else if (signo=="Capricornio") {
-            return "Al compás de Saturno, planeta anillado y dios guardián del tiempo, este signo terrenal caracteriza a personas trabajadoras, estructuradas y disciplinadas que aspiran al éxito y en muchos casos cargan con el deber ser. ";
-        }else if (signo=="Acuario") {
-            return "Influenciado por Urano, astro de la deidad del cielo, este signo de aire eleva la intelectualidad. ";
-        }else if (signo=="Piscis") {
-            return "Regido por Neptuno, planeta azul asociado al dios del mar, este signo de agua hace a personas sensibles, intuitivas y altruistas, que diluyen barreras y llevan todo lo que hacen más allá con su extraordinaria imaginación. ";
-        }
-        return "No existe coincidencia";
+
+    public String getDireccion() {
+        return direccion;
     }
 
-    //ETAPA DE DESARROLLO 
-     
-    public void etapaDesarrollo(int edad){
-        String resultado="";
-        if(edad>=0 && edad<=5){
-            resultado="Primera infancia";
-        }else if (edad>=6 && edad<=11) {
-            resultado= "Infancia";
-        }else if (edad>=12 && edad<=18) {
-             resultado= "Adolescencia";
-        }else if (edad>=14 && edad<=26) {
-            resultado= "Juventud";
-        }else if(edad>=19 && edad<40){
-             resultado= "Adultez Temprana";
-        }else if (edad>=40 && edad<60) {
-            resultado= "Adultez Media";
-        }else if (edad>60) {
-            resultado= "Adultez Mayor";
-        }
-        System.out.println("Tu etapa de desarrollo es: "+resultado);
-    
-    
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
-    
-    public void imprimir(){
-        System.out.println("DATOS DE LA PERSONA\n"+
-                "N° Cédula:"+getCedula()+"\n"+
-                "Nombre:"+getNombre()+"\n"+
-                "Apellidos:"+getApellido()+"\n"+
-                "Dirección:"+getDireccion()+"\n"+
-               "Teléfono:"+getTelefono()+"\n"+
-                "Fecha Nacimiento:"+getFechaNacimiento()+"\n"+
-                "Signo Zodiaco:"+getSigno());
-    
-    
-    
+
+    public String getCorreoElectrinico() {
+        return correoElectrinico;
+    }
+
+    public void setCorreoElectrinico(String correoElectrinico) {
+        this.correoElectrinico = correoElectrinico;
+    }
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public String getFecha_de_nacimiento() {
+        return fecha_de_nacimiento;
+    }
+
+    public void setFecha_de_nacimiento(String fecha_de_nacimiento) {
+        this.fecha_de_nacimiento = fecha_de_nacimiento;
+    }
+
+    // 4.- Método de reglas de negocio
+    public String imprimir() {
+        return "--------DATOS DE PERSONA----------\n"
+                + "Id: " + getIdPersona() + "\n"
+                + "NOMBRE: " + getNombre() + "\n"
+                + "APELLIDO: " + getApellido() + "\n"
+                + "CEDULA: " + getCedula() + "\n"
+                + "TELÉFONO: " + getTelefono() + "\n"
+                + "DIRECCIÓN: " + getDireccion() + "\n"
+                + "CORREO ELECTRÓNICO: " + getCorreoElectrinico() + "\n"
+                + "SEXO: " + getSexo() + "\n"
+                + "FECHA DE NACIMIENTO: " + getFecha_de_nacimiento() + "\n";
     }
 }
