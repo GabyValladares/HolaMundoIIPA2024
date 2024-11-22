@@ -12,6 +12,11 @@ import java.util.Date;
  */
 public class Persona {
     //1.-DECLARAR LOS ATRIBUTOS DE TIPO PRIVADOS
+    private String nombre;
+    private String apellido;
+    private String direccion;
+    private String cedula;
+    private String telefono;
     private String signo;
     private Date fechaNacimiento;
     
@@ -20,6 +25,16 @@ public class Persona {
     public Persona() {
     }
 
+    public Persona(String nombre, String apellido, String direccion, String cedula, String telefono, String signo, Date fechaNacimiento) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.direccion = direccion;
+        this.cedula = cedula;
+        this.telefono = telefono;
+        this.signo = signo;
+        this.fechaNacimiento = fechaNacimiento;
+    }
+    
    //3.-MÉTODOS DE ENCAPSULAMIENTO
 
     //MÉTODO DE RETORNO-> DEVUELVE CADENA
@@ -42,6 +57,46 @@ public class Persona {
 
     public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
     
     //4.-MÉTODO DE REGLA DE NEGOCIO
@@ -101,5 +156,17 @@ public class Persona {
     
     }
     
+    public void imprimir(){
+        System.out.println("DATOS DE LA PERSONA\n"+
+                "N° Cédula:"+getCedula()+"\n"+
+                "Nombre:"+getNombre()+"\n"+
+                "Apellidos:"+getApellido()+"\n"+
+                "Dirección:"+getDireccion()+"\n"+
+               "Teléfono:"+getTelefono()+"\n"+
+                "Fecha Nacimiento:"+getFechaNacimiento()+"\n"+
+                "Signo Zodiaco:"+getSigno());
     
+    
+    
+    }
 }
