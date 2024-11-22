@@ -69,7 +69,13 @@ public class Libro {
     }
     
     
-
+    public String prestarLibro(){
+        return "libro Prestado";
+    }
+    
+    public String devolverLibro(){
+        return "libro devuelto";
+    }
     @Override
     public String toString() {
         return "Datos del Libro\n"+
