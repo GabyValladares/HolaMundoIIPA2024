@@ -46,15 +46,60 @@ public class Persona {
     
     //4.-MÉTODO DE REGLA DE NEGOCIO
     public String determinarHoroscopo(){
-           if(signo=="Aries"){
-               return "Hoy será un mal día ";
-           }else if (signo=="Leo") {
-            return "Caminaras por sendas peligrosas";
+        //compara 2 cadenas y devuelve un entero 0 si es igual, !=0 si no es igual
+           if(signo.compareTo("Aries")==0){
+               return "¡Eres de Aires! Gobernado por Marte, planeta relacionado con el dios romano de la guerra, este signo de fuego enciende nuevos comienzos";
+           }//ignora las mayúsculas o minúsculas de una cadena
+           else if (signo.compareToIgnoreCase("Tauro")==0) {
+            return "Reinadas por Venus, cuerpo celeste asociado a la divinidad del amor y la belleza, las personas de este signo conectado con la tierra, son manifestadoras de belleza y abundancia";
+        }//compara 2 cadenas y devuelve un booleano true si es igual, false si no es igual
+           else if (signo.equals("Géminis")==true) {
+            return "Regido por Mercurio, astro vinculado al mensajero de los dioses, este signo intelectual se distingue por sus dones comunicativos.";
+        }else if (signo.equals("Cáncer")) {
+            return "Influenciado por la luna, este signo de agua hace a personas sumamente emocionales que nutren y se nutren del hogar y la familia. ";
+        }else if (signo=="Leo") {
+            return "Regido por el astro rey, este signo de fuego hace a los leoninos brillar con su esencia creativa e iluminar al prójimo, inspirándolo a rugir a su lado. ";
+        }else if (signo=="Virgo") {
+            return "Reinado por Mercurio, el mismo provee el don de bajar ideas a tierra. No por nada, la agenda y la rutina son mejores amigas de los virginianos, que a pesar de esto, no prescinden de la flexibilidad y son sumamente analíticos. ";
+        }else if (signo=="Libra") {
+            return "Gobernados por Venus, los librianos son conocidos por entrar en simbiosis con la estética y por formar alianzas y parejas.";
+        }else if (signo=="Escorpio") {
+            return "Regido por Plutón, astro asociado a la deidad del inframundo, este signo de agua hace a personas intuitivas y esotéricas. ";
+        }else if (signo=="Sagitario") {
+            return "Gobernado por Júpiter, planeta del padre de los dioses, las personas de este signo fogoso son inspiradoras y grandes maestras. ";
+        }else if (signo=="Capricornio") {
+            return "Al compás de Saturno, planeta anillado y dios guardián del tiempo, este signo terrenal caracteriza a personas trabajadoras, estructuradas y disciplinadas que aspiran al éxito y en muchos casos cargan con el deber ser. ";
+        }else if (signo=="Acuario") {
+            return "Influenciado por Urano, astro de la deidad del cielo, este signo de aire eleva la intelectualidad. ";
+        }else if (signo=="Piscis") {
+            return "Regido por Neptuno, planeta azul asociado al dios del mar, este signo de agua hace a personas sensibles, intuitivas y altruistas, que diluyen barreras y llevan todo lo que hacen más allá con su extraordinaria imaginación. ";
         }
         return "No existe coincidencia";
     }
 
-  
+    //ETAPA DE DESARROLLO 
+     
+    public void etapaDesarrollo(int edad){
+        String resultado="";
+        if(edad>=0 && edad<=5){
+            resultado="Primera infancia";
+        }else if (edad>=6 && edad<=11) {
+            resultado= "Infancia";
+        }else if (edad>=12 && edad<=18) {
+             resultado= "Adolescencia";
+        }else if (edad>=14 && edad<=26) {
+            resultado= "Juventud";
+        }else if(edad>=19 && edad<40){
+             resultado= "Adultez Temprana";
+        }else if (edad>=40 && edad<60) {
+            resultado= "Adultez Media";
+        }else if (edad>60) {
+            resultado= "Adultez Mayor";
+        }
+        System.out.println("Tu etapa de desarrollo es: "+resultado);
+    
+    
+    }
     
     
 }
