@@ -12,17 +12,23 @@ import java.util.Date;
  */
 public class Empleado extends Persona{
     
+    private int codigo;
     private String cargo;
     private double sueldo;
+    private boolean seguro;
 
     public Empleado() {
     }
 
-    public Empleado(String cargo, double sueldo, String nombre, String apellido, String signo, Date fechaNacimiento) {
-        super(nombre, apellido, signo, fechaNacimiento);
+    public Empleado(int codigo, String cargo, double sueldo, boolean seguro, int cedula, String nombre, String apellido, String direccion, String telefono, String signo, Date fechaNacimiento) {
+        super(cedula, nombre, apellido, direccion, telefono, signo, fechaNacimiento);
+        this.codigo = codigo;
         this.cargo = cargo;
         this.sueldo = sueldo;
+        this.seguro = seguro;
     }
+
+    
 
     public String getCargo() {
         return cargo;
@@ -40,16 +46,35 @@ public class Empleado extends Persona{
         this.sueldo = sueldo;
     }
 
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public boolean getSeguro() {
+        return seguro;
+    }
+
+    public void setSeguro(boolean seguro) {
+        this.seguro = seguro;
+    }
+
+    
     @Override
     public String toString() {
-        return """
-               Datos Empleado
-               """+
-               "Nombres: "+ super.getNombre() +" "+ super.getApellido() +"\n"+
-               "Signo: "+ super.getSigno()+"\n"+
-               "Fecha de Nacimiento: "+super.getFechaNacimiento()+"\n"+
-               "Cargo: "+ cargo +"\n"+
-               "Sueldo: "+ sueldo ;
+        return "Datos Empleado\n" 
+                + "Código: " + codigo + "\n" +
+                "Nombres: " + super.getNombre() + " " + super.getApellido() + "\n" + 
+                "Dirección: " + super.getDireccion() + "\n" + 
+                "Teléfono: " + super.getTelefono() + "\n" + 
+                "Signo: " + super.getSigno() + "\n" + 
+                "Fecha de Nacimiento: " + super.getFechaNacimiento().getDate() + "\n" + 
+                "Cargo: " + cargo + "\n" + 
+                "Sueldo: " + sueldo + "\n" + 
+                "Seguro: " + (seguro ? "Sí" : "No")+"\n";
     }
     
     

@@ -10,8 +10,11 @@ import java.util.Date;
  */
 public class Persona {
     //1. Declarar atributos
+    private int cedula;
     private String nombre;
     private String apellido;
+    private String direccion;
+    private String telefono;
     private String signo;
     private Date fechaNacimiento;
 
@@ -20,15 +23,17 @@ public class Persona {
     }
     // 2.2 Metodo constructor con argumentos
 
-    public Persona(String nombre, String apellido, String signo, Date fechaNacimiento) {
+    public Persona(int cedula, String nombre, String apellido, String direccion, String telefono, String signo, Date fechaNacimiento) {
+        this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
+        this.direccion = direccion;
+        this.telefono = telefono;
         this.signo = signo;
         this.fechaNacimiento = fechaNacimiento;
     }
 
     
-   
 
     //3. Metodos de get y set
     
@@ -37,7 +42,6 @@ public class Persona {
     }
 
     public void setSigno(String signo) {
-        this.signo = signo;
     }
 
     public Date getFechaNacimiento() {
@@ -63,6 +67,33 @@ public class Persona {
     public void setApellido(String apellido) {
         this.apellido = apellido;
     }
+
+    public String getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    public int getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(int cedula) {
+        this.cedula = cedula;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
+    }
+
+    
+    
     
     
     
@@ -117,5 +148,15 @@ public class Persona {
          System.out.println("Tu etapa de desarrollo es : "+rsult);       
         
     }
+    
+    public void imprimir(){
+        System.out.println("Datos Persona\n" + 
+                "Cédula: " + cedula + "\n" + 
+                "Nombres: " + nombre + " " + apellido + "\n" + 
+                "Teléfono: " + telefono + "\n" + 
+                "Dirección: " + direccion + "\n" + "Signo: " + signo + "\n" + 
+                "Fecha de Nacimiento: " + fechaNacimiento + "\n"
+                );
+    } 
 }
     

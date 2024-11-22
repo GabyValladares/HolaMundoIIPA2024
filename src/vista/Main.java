@@ -8,6 +8,7 @@ import modelo.Coche;
 import java.util.Date;
 import java.util.Scanner;
 import modelo.Empleado;
+import modelo.Administrativo;
 /**
  *
  * @author Roberto2022
@@ -80,15 +81,29 @@ public class Main {
         // OBJETOS DATE
         Date FechaNacimiento = new  Date(2004, 05, 13);
         Date AnioVehiculo = new  Date(2001, 1, 1);
-        
+        Date FechaNacimiento2 = new  Date(1973, 07, 16);
         // OBJETO PERSONA
-        Persona p2 = new Persona("Roberto","Villamar", "Tauro", FechaNacimiento);
+        Persona p2 = new Persona(1004367601, "Roberto", "Villamar", "Ibarra", "0980064071", 
+                "Tauro", FechaNacimiento);
         
-        // OBJETO COCHE
+        // OBJETO COCHE Constructor
         Coche c1 = new Coche("IBA-1556", "Rio", "Negro", 1000.0, p2, AnioVehiculo, "Sedan");
         c1.imprimir();
         
         System.out.println(c1.toString());
-               
+        
+        
+        //constructor hibrido
+        Empleado ep = new Empleado(1, "Profesor", 2000.5, true, 100436863, 
+                "Roberto", "Villamar", "Ibarra", "0980064071", "Aries", FechaNacimiento2);
+        
+        Empleado ep2 = new  Empleado();
+        
+        ep2.setNombre("Andres");
+        ep2.setApellido("Perez");
+        System.out.println(ep.toString());
+        System.out.println(ep2.toString());
+        
+        
     }
 }
