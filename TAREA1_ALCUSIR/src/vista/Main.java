@@ -8,6 +8,7 @@ package vista;
 import java.util.Scanner;
 import java.util.Set;
 import modelo.Coche;
+import modelo.Docente;
 import modelo.Empleado;
 import modelo.Libro;
 import modelo.Persona;
@@ -69,7 +70,7 @@ public class Main {
         Persona fer= new Persona();
         fer.setApellido("Alcusir ");
         fer.setNombre("Fernanda");
-        
+   
      
         Coche c1=new Coche("IBA9613", "GRAN VITARA", "MORADO", 12.800,fer , 2022, "AUTOMÓVIL");
         c1.imprimir();
@@ -92,8 +93,25 @@ public class Main {
         Empleado e1=new Empleado();
         e1.setNombre ("JUAN");
         e1.setApellido ("PÉREZ");
-        e1.setCargo("CAJERO");
+        e1.setCargo("CAJERO");   
         System.out.println(e1.toString());
+        
+        //CONSUMIR UN OBJETO DE TIPO DOCENTE
+        Docente d1=new Docente();
+        d1.setCedula("1003188197");
+        d1.setDireccion("Alpachaca");
+        d1.setTelefono("098630941");
+        d1.setNombre ("María");
+        d1.setApellido ("Luna"); 
+        d1.setCodDocente (01);
+        d1.setTituloAcademico ("Ciencias de la Educación");
+        d1.setEspecialidad ("Informática") ;
+        d1.setExperienciaDocente (3);
+        d1.setSueldo (850.00);
+        d1.setSeguro(true);
+        d1.setCorreo ("maria.luna@gmail.com");
+        System.out.println(d1.toString());
+
         
          //DEBER
         //CLONAR Y CREARSE SU PROPIA RAMA

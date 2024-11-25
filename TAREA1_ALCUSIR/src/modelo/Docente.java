@@ -19,6 +19,7 @@ public class Docente extends Persona{
     private int experienciaDocente;
     private double sueldo;
     private boolean seguro;
+    private String correo;
     
     //2. CONSTRUCTORES
     
@@ -30,17 +31,18 @@ public class Docente extends Persona{
     
     // DATOS DE LA SUBCLASE
 
-    public Docente(int codDocente, String tituloAcademico, String especialidad, int experienciaDocente, double sueldo, boolean seguro) {
+    public Docente(int codDocente, String tituloAcademico, String especialidad, int experienciaDocente, double sueldo, boolean seguro, String correo) {
         this.codDocente = codDocente;
         this.tituloAcademico = tituloAcademico;
         this.especialidad = especialidad;
         this.experienciaDocente = experienciaDocente;
         this.sueldo = sueldo;
         this.seguro = seguro;
+        this.correo= correo;
     }
     // DATOS HIBRIDOS-SUBCLASE Y SUPERCLASE
 
-    public Docente(int codDocente, String tituloAcademico, String especialidad, int experienciaDocente, double sueldo, boolean seguro, String signo, Date fechaNacimiento, String cedula, String nombre, String apellido, String direccion, String Telefono) {
+    public Docente(int codDocente, String tituloAcademico, String especialidad, int experienciaDocente, double sueldo, boolean seguro, String correo, String signo, Date fechaNacimiento, String cedula, String nombre, String apellido, String direccion, String Telefono) {
         super(signo, fechaNacimiento, cedula, nombre, apellido, direccion, Telefono);
         this.codDocente = codDocente;
         this.tituloAcademico = tituloAcademico;
@@ -48,6 +50,7 @@ public class Docente extends Persona{
         this.experienciaDocente = experienciaDocente;
         this.sueldo = sueldo;
         this.seguro = seguro;
+        this.correo= correo;
     }
     
     //3. MÉTODOS DE ENCAPSULAMIENTO
@@ -99,15 +102,41 @@ public class Docente extends Persona{
     public void setSeguro(boolean seguro) {
         this.seguro = seguro;
     }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
     
     
+    // 4. MÉTODOS DE REGLA DE NEGOCIO
+    
+    public String IngrearNotas(){
+    return "NOTAS ";
+    
+    }
+     @Override
+    public String toString() {
+        return "\n DATOS DEL DOCENTE\n"+
+                "N° Cédula: "+getCedula()+"\n"+
+                "Nombre: "+getNombre()+"\n"+
+                "Apellido: "+getApellido()+"\n"+
+                "Dirección: "+getDireccion()+"\n"+
+                "Teléfono: "+getTelefono()+"\n"+
+                "Fecha Nacimiento: "+getFechaNacimiento()+"\n"+
+                "Código Docente: "+getCodDocente()+"\n"+
+                "Título Académico: "+getTituloAcademico()+"\n"+
+                "Especialidad: "+getEspecialidad()+"\n"+
+                "Años de experiencia: "+getExperienciaDocente()+" años"+ "\n"+
+                "Salario: "+getSueldo()+" dólares"+  "\n"+
+                "Seguro: "+getSeguro()+"\n" + "\n"+
+                "Correo Electrónico:"+getCorreo();
+        
+            }
     
 
     }
     
-    
-    
-    
-    
-}
-
