@@ -50,6 +50,56 @@ public class Docente extends Persona{
         this.seguro = seguro;
     }
     
+    //3. MÉTODOS DE ENCAPSULAMIENTO
+
+    public int getCodDocente() {
+        return codDocente;
+    }
+
+    public void setCodDocente(int codDocente) {
+        this.codDocente = codDocente;
+    }
+
+    public String getTituloAcademico() {
+        return tituloAcademico;
+    }
+
+    public void setTituloAcademico(String tituloAcademico) {
+        this.tituloAcademico = tituloAcademico;
+    }
+
+    public String getEspecialidad() {
+        return especialidad;
+    }
+
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
+    }
+
+    public int getExperienciaDocente() {
+        return experienciaDocente;
+    }
+
+    public void setExperienciaDocente(int experienciaDocente) {
+        this.experienciaDocente = experienciaDocente;
+    }
+
+    public double getSueldo() {
+        return sueldo;
+    }
+
+    public void setSueldo(double sueldo) {
+        this.sueldo = sueldo;
+    }
+
+    public boolean getSeguro() {
+        return seguro;
+    }
+
+    public void setSeguro(boolean seguro) {
+        this.seguro = seguro;
+    }
+    
     
     
 
