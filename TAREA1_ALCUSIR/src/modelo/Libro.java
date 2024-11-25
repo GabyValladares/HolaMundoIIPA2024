@@ -16,6 +16,8 @@ public class Libro {
     private String autorLibro;
     private String editorialLibro;
     private int anio;
+    private boolean estado;
+    //private boolean estado;
     
     //2. METODO CONTRUCTOR //PARA INICIALIZAR LAS VARIABLES DEL OBJETO
     //2.1.- Constructor vacío: Al inicializar el objeto el usuario
@@ -33,6 +35,7 @@ public class Libro {
         this.autorLibro = autorLibro;
         this.editorialLibro = editorialLibro;
         this.anio=anio;
+        this.estado=estado;
         
     }
         //3.- ENCAPSULAMIENTO
@@ -78,27 +81,45 @@ public class Libro {
         this.anio = anio;
     }
     
+    public void getEstado(boolean estado){
+      this.estado=estado;
+    }
+    public void setEstado(boolean estado){
+         this.estado=estado;
+
+       }
+
+    
     //4.-MÉTODOS DE REGLA DE NEGOCIO
+    public String prestarLibro(){
+    return "Libro Prestado";
+        
+    }
+     public String devolverLibro(){
+    return "Libro Dvuelto";
+        
+    }
     
      //IMPRIMIR O TOSTRING->IMPRIMIR
     public void imprimir(){
         System.out.println("DATOS DEL LIBRO\n"+
-                "Placa: "+idLibro+"\n"+
-                "Modelo: "+tituloLibro+"\n"+
-                "Color: "+autorLibro+"\n"+
-                "Precio: "+editorialLibro+"\n"+
-                "Año de Fabricación: "+getAnio()+"\n");
+                "Codigo del Libro: "+idLibro+"\n"+
+                "Título : "+tituloLibro+"\n"+
+                "Autor : "+autorLibro+"\n"+
+                "Editorial: "+editorialLibro+"\n"+
+                "Año de Publicación: "+getAnio()+"\n");
     }
     
-    
+    /*
     @Override
     public String toString() {
         return "\n"+ "DATOS DEL LIBRO\n"+
-                "Placa: "+idLibro+"\n"+
-                "Modelo: "+tituloLibro+"\n"+
-                "Color: "+autorLibro+"\n"+
-                "Precio: "+editorialLibro+"\n"+
-                "Año de Fabricación: "+getAnio()+"\n";}
+                "Codigo del Libro : "+idLibro+"\n"+
+                "Título : "+tituloLibro+"\n"+
+                "Autor : "+autorLibro+"\n"+
+                "Editorial: "+editorialLibro+"\n"+
+                "Año de Publicación: "+getAnio()+"\n";}
+*/
     
 }
 

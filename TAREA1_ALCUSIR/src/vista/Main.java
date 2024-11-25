@@ -8,6 +8,7 @@ package vista;
 import java.util.Scanner;
 import java.util.Set;
 import modelo.Coche;
+import modelo.Empleado;
 import modelo.Libro;
 import modelo.Persona;
 
@@ -97,9 +98,20 @@ public class Main {
         //5) Crea una clase Empleado. Generar la abstracción de esta clase.
         //6) Diagrama de Clases 
         //7) Versionar en mi repositorio https://github.com/GabyValladares/HolaMundoIIPA2024
-    }
-    public void holaMundo(){
         
+         //CONSUMIENDO UN OBJETO 
+    
+    Empleado e1=new Empleado();
+    e1.setNombre ("JUAN");
+    e1.setApellido ("PÉREZ");
+    e1.setCargo("CAJERO");
+        
+         
     }
+   // public void holaMundo(){
+   // }
+    
+   
+    
 }
 

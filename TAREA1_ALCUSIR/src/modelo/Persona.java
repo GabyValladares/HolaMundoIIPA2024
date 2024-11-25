@@ -25,6 +25,19 @@ public class Persona {
     public Persona(){ //ctrl + espacio
     
     }
+
+    public Persona(String signo, Date fechaNacimiento, String cedula, String nombre, String apellido, String direccion, String Telefono) {
+        this.signo = signo;
+        this.fechaNacimiento = fechaNacimiento;
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.direccion = direccion;
+        this.Telefono = Telefono;
+    }
+    
+    
+    
     //3. Métodos de encapsulamiento
     // clic derecho, insertar codigo, 
     // Método de retorno-> Devuelve cadena
@@ -145,6 +158,15 @@ public class Persona {
     }
     
     
-    
+    public void imprimir(){
+        System.out.println("DATOS DE LA PERSONA\n"+
+                "N° Cédula:"+getCedula()+"\n"+
+                "Nombre:"+getNombre()+"\n"+
+                "Apellidos:"+getApellido()+"\n"+
+                "Dirección:"+getDireccion()+"\n"+
+               "Teléfono:"+getTelefono()+"\n"+
+                "Fecha Nacimiento:"+getFechaNacimiento()+"\n"+
+                "Signo Zodiaco:"+getSigno());
+    }
     
 }
