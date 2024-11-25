@@ -11,11 +11,14 @@ package modelo;
 public class Docente {
     
      //1. ATRIBUTOS
-    private int codigo;
-    private String cargo;
+    private int codDocente;
+    private String tituloAcademico;
+    private String especialidad;
+    private int experienciaDocente;
     private double sueldo;
     private boolean seguro;
-    private String correo;
+    
+    
     
     
     

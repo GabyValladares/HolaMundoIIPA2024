@@ -87,6 +87,13 @@ public class Main {
         //System.out.println(l1.toString());
         //l1.toString();
         
+
+        //CONSUMIR UN OBJETO DE TIPO EMPLEADO
+        Empleado e1=new Empleado();
+        e1.setNombre ("JUAN");
+        e1.setApellido ("PÉREZ");
+        e1.setCargo("CAJERO");
+        System.out.println(e1.toString());
         
          //DEBER
         //CLONAR Y CREARSE SU PROPIA RAMA
@@ -101,10 +108,7 @@ public class Main {
         
          //CONSUMIENDO UN OBJETO 
     
-    Empleado e1=new Empleado();
-    e1.setNombre ("JUAN");
-    e1.setApellido ("PÉREZ");
-    e1.setCargo("CAJERO");
+
         
          
     }
