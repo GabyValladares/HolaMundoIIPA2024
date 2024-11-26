@@ -4,8 +4,11 @@
  */
 package vista;
 
+import java.awt.List;
 import java.util.Scanner;
 import modelo.Coche;
+import modelo.Docente;
+import modelo.Empleado;
 import modelo.Persona;
 
 /**
@@ -56,6 +59,8 @@ public class Main {
         //CONSUMIR UN OBJETO DE TIPO COCHE
         Persona nahim=new Persona();
         nahim.setSigno("Piscis");
+        nahim.setNombre("Nahim");
+        nahim.setApellido("Marulanda");
         Coche c1=new Coche("IBA9613", "GRAN VITARA", "MORADO", 12.800,nahim , 2022, "AUTOMÓVIL");
         c1.imprimir();
         c1.toString();
@@ -69,6 +74,68 @@ public class Main {
         //5) Crea una clase Empleado. Generar la abstracción de esta clase.
         //6) Diagrama de Clases 
         //7) Versionar en mi repositorio https://github.com/GabyValladares/HolaMundoIIPA2024
+        
+        
+        Empleado e1=new Empleado();
+        e1.setNombre("JUAN");
+        e1.setApellido("PÉREZ");
+        e1.setCargo("CAJERO");
+        System.out.println(e1.toString());
+        
+        Docente d1= new Docente();
+        d1.setNombre("Deyvi");
+        d1.setApellido("Tirira");
+        d1.setCedula("0450102785");
+        
+        d1.setAniosExperiencia(5);
+        d1.setTituloAcademico("Técnico");
+        d1.setEspecialidad("Software");
+        System.out.println(d1.toString());
+        //CASTING: Es la transformación de tipos de datos 
+        String x="123";
+        String y="567";
+        int sum=Integer.parseInt(x)+Integer.parseInt(y);
+        System.out.println("La suma es:"+sum);
+        
+        
+        //POLIMORFISMO
+        Docente dd1=new Docente("Software", 10001, "Ingeniero en Sistemas", 6);
+        
+        System.out.println(dd1.toString());
+        
+        //DOWNCASTING:CREAR UNA INSTANCIA DE LA SUPERCLASE CON EL CONSTRUCTOR DE UNA SUBCLASE
+        Persona xe=new Docente();
+        xe.setNombre("Juan");
+     
+        //UPCASTING:ALMACENAR EN UN OBJETO DE TIPO SUBCLASE EL OBJETO INSTANCIADO DE LA SUPERCLASE
+        Docente t= (Docente) xe;
+        t.setApellido("Díaz");
+        t.setEspecialidad("Matemáticas");
+        System.out.println(t.toString());
+         
+        //COLECCIONES O ESTRUCTURAS DE DATOS :{} DE DATOS 
+        
+        char[] listaLetras=new char[6];
+        char[] listaLetras1={'A','B','C','D','E','F'};
+        Scanner es=new Scanner(System.in);
+        char[] listaLetras2=new char[6];
+        for (int i = 0; i <=5; i++) {
+            System.out.println("Ingrese una letra");
+            listaLetras2[i]=es.next().charAt(0);           
+        }
+        Docente[] listaDocentes=new Docente[2];
+        for (int i = 0; i <listaDocentes.length-1; i++) {
+            Docente j=new Docente();
+            System.out.println("Ingrese un nombre");
+            j.setNombre(es.next());
+            listaDocentes[i]=j;  
+        }
+        
+                
+        
+        
+        
+        
+    } 
     
-    }       
 }
